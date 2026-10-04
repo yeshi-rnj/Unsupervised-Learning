@@ -1,0 +1,77 @@
+Shape: (178, 13); features: ['alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols', 'flavanoids', 'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280/od315_of_diluted_wines', 'proline']
+
+k= 2  inertia= 1658.76  silhouette=0.2593
+k= 3  inertia= 1277.93  silhouette=0.2849
+k= 4  inertia= 1175.43  silhouette=0.2602
+k= 5  inertia= 1109.51  silhouette=0.2016
+k= 6  inertia= 1046.00  silhouette=0.2372
+k= 7  inertia=  981.60  silhouette=0.2036
+k= 8  inertia=  935.20  silhouette=0.1570
+k= 9  inertia=  889.89  silhouette=0.1499
+k=10  inertia=  845.90  silhouette=0.1436
+
+Best k by silhouette: 3
+
+Explained variance ratio: PC1=0.3620, PC2=0.1921, total=0.5541
+Cumulative variance (all PCs): [0.362 0.554 0.665 0.736 0.802 0.851 0.893 0.92  0.942 0.962 0.979 0.992
+ 1.   ]
+
+Top PCA loadings:
+                                 PC1    PC2
+proline                       0.287  0.365
+alcohol                       0.144  0.484
+color_intensity              -0.089  0.530
+hue                           0.297 -0.279
+od280/od315_of_diluted_wines  0.376 -0.164
+malic_acid                   -0.245  0.225
+
+Cluster sizes:
+ cluster
+0    65
+1    51
+2    62
+Name: count, dtype: int64
+
+Cluster means (original units):
+ cluster                            0       1        2
+alcohol                        12.25   13.13    13.68
+malic_acid                      1.90    3.31     2.00
+ash                             2.23    2.42     2.47
+alcalinity_of_ash              20.06   21.24    17.46
+magnesium                      92.74   98.67   107.97
+total_phenols                   2.25    1.68     2.85
+flavanoids                      2.05    0.82     3.00
+nonflavanoid_phenols            0.36    0.45     0.29
+proanthocyanins                 1.62    1.15     1.92
+color_intensity                 2.97    7.23     5.45
+hue                             1.06    0.69     1.07
+od280/od315_of_diluted_wines    2.80    1.70     3.16
+proline                       510.17  619.06  1100.23
+
+Sample rows per cluster:
+
+--- Cluster 0 ---
+     alcohol  malic_acid   ash  alcalinity_of_ash  magnesium  total_phenols  flavanoids  nonflavanoid_phenols  proanthocyanins  color_intensity   hue  od280/od315_of_diluted_wines  proline  cluster
+116    11.82        1.47  1.99               20.8       86.0           1.98        1.60                  0.30             1.53             1.95  0.95                          3.33    495.0        0
+125    12.07        2.16  2.17               21.0       85.0           2.60        2.65                  0.37             1.35             2.76  0.86                          3.28    378.0        0
+59     12.37        0.94  1.36               10.6       88.0           1.98        0.57                  0.28             0.42             1.95  1.05                          1.82    520.0        0
+
+--- Cluster 1 ---
+     alcohol  malic_acid   ash  alcalinity_of_ash  magnesium  total_phenols  flavanoids  nonflavanoid_phenols  proanthocyanins  color_intensity   hue  od280/od315_of_diluted_wines  proline  cluster
+170    12.20        3.03  2.32               19.0       96.0           1.25        0.49                  0.40             0.73             5.50  0.66                          1.83    510.0        1
+167    12.82        3.37  2.30               19.5       88.0           1.48        0.66                  0.40             0.97            10.26  0.72                          1.75    685.0        1
+173    13.71        5.65  2.45               20.5       95.0           1.68        0.61                  0.52             1.06             7.70  0.64                          1.74    740.0        1
+
+--- Cluster 2 ---
+    alcohol  malic_acid   ash  alcalinity_of_ash  magnesium  total_phenols  flavanoids  nonflavanoid_phenols  proanthocyanins  color_intensity   hue  od280/od315_of_diluted_wines  proline  cluster
+50    13.05        1.73  2.04               12.4       92.0           2.72        3.27                  0.17             2.91             7.20  1.12                          2.91   1150.0        2
+56    14.22        1.70  2.30               16.3      118.0           3.20        3.00                  0.26             2.03             6.38  0.94                          3.31    970.0        2
+0     14.23        1.71  2.43               15.6      127.0           2.80        3.06                  0.28             2.29             5.64  1.04                          3.92   1065.0        2
+
+Adjusted Rand Index vs hidden cultivar labels: 0.897
+Crosstab (cluster vs cultivar):
+ cultivar   0   1   2
+cluster             
+0          0  65   0
+1          0   3  48
+2         59   3   0
